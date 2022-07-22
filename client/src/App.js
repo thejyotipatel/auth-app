@@ -1,6 +1,7 @@
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom'
 import { useEffect, useState } from 'react'
 import Home from './page/home'
+import Register from './page/register'
 function App() {
   // const [profile, setProfile] = useState(null)
   // useEffect(() => {
@@ -28,7 +29,7 @@ function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path='/' element={<Home />}></Route>
+        <Route path='/' element={<Register />}></Route>
       </Routes>
     </BrowserRouter>
   )

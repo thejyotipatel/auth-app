@@ -5,20 +5,20 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: #282c34;
+  /* background-color: #282c34; */
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  color: white;
+  /* color: white; */
 }
 /* profile style */
 header {
   text-transform: capitalize;
   text-align: center;
-  font-size: 2em;
+  /* font-size: 2em; */
 }
 .details {
   display: flex;

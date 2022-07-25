@@ -1,9 +1,4 @@
-import {
-  DISPLAY_ALERT,
-  CLEAR_ALERT,
-  TOGGLE_SIDEBAR,
-  TOGGLE_LOGIN_BUTTON,
-} from './action'
+import { TOGGLE_SIDEBAR } from './action'
 
 const reducer = (state, action) => {
   if (action.type === TOGGLE_SIDEBAR) {

@@ -1,7 +1,7 @@
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom'
 import { useEffect, useState } from 'react'
-import Home from './page/home'
-import Register from './page/register'
+
+import { Profile } from './page/dashboard'
 function App() {
   // const [profile, setProfile] = useState(null)
   // useEffect(() => {
@@ -29,7 +29,7 @@ function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path='/' element={<Register />}></Route>
+        <Route path='/' element={<Profile />}></Route>
       </Routes>
     </BrowserRouter>
   )

@@ -9,6 +9,10 @@ const ShareLayout = () => {
   return (
     <div className='dashboard'>
       <button className='menu-btn' onClick={toggleSidebar}>
+        <div className='user'>
+          <img src='' alt='user image' />
+          <p>thejyotipatel</p>
+        </div>
         {showSidebar ? (
           <span>
             <AiFillCaretDown />

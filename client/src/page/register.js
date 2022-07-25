@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { AiFillFacebook, AiOutlineMail } from 'react-icons/ai'
 import { BsGithub, BsGoogle, BsLockFill, BsTwitter } from 'react-icons/bs'
-import { InputComponent } from '../components'
+import { InputComponent, Sidebar } from '../components'
 
 const initalState = {
   email: '',
@@ -28,6 +28,7 @@ const Register = () => {
   return (
     <>
       <form className='container' onSubmit={onSubmit}>
+        <Sidebar />
         <header>
           <div className='logo'>
             <img src='' alt='logo' />

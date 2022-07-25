@@ -1,3 +1,4 @@
 import InputComponent from './inputComponent'
+import Sidebar from './sidebar'
 
-export { InputComponent }
+export { InputComponent, Sidebar }

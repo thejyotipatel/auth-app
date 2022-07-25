@@ -1,18 +1,26 @@
-import React,{useContext,useReducer} from 'react'
-import { DISPLAY_ALERT,CLEAR_ALERT, TOGGLE_SIDEVBAR } from './action'
-
+import React, { useContext, useReducer } from 'react'
+import { DISPLAY_ALERT, CLEAR_ALERT, TOGGLE_SIDEBAR } from './action'
+import reducer from './reducer'
 const initalState = {
- isLoading :false,
- showSidebar:false,
+  isLoading: false,
+  showSidebar: false,
 }
 
 const AppContaxt = React.createContext()
 
-const AppProvider = ({children}) => {
- const [state ,dispatch] = useReducer()
+const AppProvider = ({ children }) => {
+  const [state, dispatch] = useReducer(reducer, initalState)
+
+  const toggleSidebar = () => {
+    dispatch({ type: TOGGLE_SIDEBAR })
+  }
   return (
-    <div>AppContaxt</div>
+    <AppContaxt.Provider value={{ ...state, toggleSidebar }}>
+      {children}
+    </AppContaxt.Provider>
   )
 }
-
-export default AppContaxt
+export const useAppContext = () => {
+  return useContext(AppContaxt)
+}
+export { AppProvider }

@@ -10,7 +10,10 @@ const ShareLayout = () => {
     <div className='dashboard'>
       <button className='menu-btn' onClick={toggleSidebar}>
         <div className='user'>
-          <img src='' alt='user image' />
+          {/* <img src='' alt='user image' /> */}
+          <span>
+            <AiOutlineUser />
+          </span>
           <p>thejyotipatel</p>
         </div>
         {showSidebar ? (

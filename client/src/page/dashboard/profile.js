@@ -1,5 +1,4 @@
-import React from 'react'
-import { AiFillCaretDown, AiFillCaretUp, AiOutlineUser } from 'react-icons/ai'
+simport { AiFillCaretDown, AiFillCaretUp, AiOutlineUser } from 'react-icons/ai'
 import { InputComponent, Sidebar } from '../../components'
 import { useAppContext } from '../../context/appContaxt'
 const Profile = () => {
@@ -8,6 +7,13 @@ const Profile = () => {
   return (
     <div className=' '>
       <button className='menu-btn' onClick={toggleSidebar}>
+        <div className='user'>
+          {/* <img src='' alt='user image' /> */}
+          <span>
+            <AiOutlineUser />
+          </span>
+          <p>thejyotipatel</p>
+        </div>
         {showSidebar ? (
           <span>
             <AiFillCaretDown />

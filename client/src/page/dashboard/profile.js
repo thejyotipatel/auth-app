@@ -1,4 +1,4 @@
-simport { AiFillCaretDown, AiFillCaretUp, AiOutlineUser } from 'react-icons/ai'
+import { AiFillCaretDown, AiFillCaretUp, AiOutlineUser } from 'react-icons/ai'
 import { InputComponent, Sidebar } from '../../components'
 import { useAppContext } from '../../context/appContaxt'
 const Profile = () => {
@@ -38,7 +38,7 @@ const Profile = () => {
             <p>Some info may be visible to other people</p>
           </div>
           <div className='row'>
-            <button type='button'>Edit</button>
+            <a href='/edit-profile'>Edit</a>
           </div>
           {/* </head> */}
           <div className='columes'>

@@ -1,4 +1,5 @@
 import React from 'react'
+import { Navigate } from 'react-router-dom'
 import {
   AiFillCamera,
   AiOutlineArrowLeft,
@@ -22,12 +23,14 @@ const EditProfile = () => {
   return (
     <div className='container'>
       <div className='back-link'>
-        <a href=''>
+        <a href='/profile'>
+          {/* <Navigate to={'/profile'}> */}
           <span>
             <AiOutlineArrowRight />
-            <Bi />
+            {/* <Bi /> */}
           </span>
           Back
+          {/* </Navigate> */}
         </a>
       </div>
       <header>

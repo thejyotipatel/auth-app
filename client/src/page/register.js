@@ -1,8 +1,8 @@
 import React, { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
-import { AiFillFacebook, AiOutlineMail } from 'react-icons/ai'
+import { AiFillFacebook, AiOutlineLogin, AiOutlineMail } from 'react-icons/ai'
 import { BsGithub, BsGoogle, BsLockFill, BsTwitter } from 'react-icons/bs'
-import { InputComponent } from '../components'
+import { InputComponent, Logo } from '../components'
 
 const initalState = {
   email: '',
@@ -27,17 +27,21 @@ const Register = () => {
 
   return (
     <>
-      <form className='container' onSubmit={onSubmit}>
-        <header>
-          <div className='logo'>
-            <img src='' alt='logo' />
-          </div>
+      <form
+        className='clr register-container || container '
+        onSubmit={onSubmit}
+      >
+        <header className='register-header || fs-100'>
+          <Logo />
+
           {value.isMember ? (
             <h1>Login</h1>
           ) : (
             <>
-              <h1>Join thousands of learners from around the world</h1>
-              <p>
+              <h1 className='clr || fs-400 fw-400  text-accent'>
+                Join thousands of learners from around the world
+              </h1>
+              <p className='clr || fs-200 fw-600 text-accent'>
                 Master web development by making real-life projects. There are
                 multiple paths for you to choose.
               </p>
@@ -56,11 +60,16 @@ const Register = () => {
             icon={<BsLockFill />}
           />
 
-          <button className='button' type='button'>
+          <button
+            className='button || text-accent-100 bg-primery-100 btn-radius fs-300 fw-600 '
+            type='button'
+          >
             {value.isMember ? 'Login' : 'Start coding now'}
           </button>
         </div>
-        <p>or continue with these social profile</p>
+        <p className='options || fw-600 fs-200 text-accent-100'>
+          or continue with these social profile
+        </p>
         <div className='social-icons'>
           <ul>
             <li>
@@ -94,11 +103,15 @@ const Register = () => {
           </ul>
         </div>
         <div className='btn-option'>
-          <p>
+          <p className='options || fw-600 fs-200 text-accent-100'>
             {value.isMember
               ? "Don't have an account yet?"
               : 'Allready a member?'}
-            <button type='button' onClick={toggleChange}>
+            <button
+              className='button || text-primery-100 ts-400'
+              type='button'
+              onClick={toggleChange}
+            >
               {value.isMember ? 'register' : 'login'}
             </button>
           </p>

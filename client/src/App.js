@@ -2,6 +2,8 @@ import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom'
 import { useEffect, useState } from 'react'
 
 import { EditProfile, Profile } from './page/dashboard'
+import Register from './page/register'
+
 function App() {
   // const [profile, setProfile] = useState(null)
   // useEffect(() => {
@@ -30,7 +32,7 @@ function App() {
     <BrowserRouter>
       <Routes>
         <Route path='/' index element={<EditProfile />}></Route>
-        <Route path='/profile' element={<Profile />} />
+        <Route path='/profile' element={<Register />} />
         <Route path='/edit-profile' element={<Profile />} />
       </Routes>
     </BrowserRouter>

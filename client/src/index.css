@@ -1,6 +1,6 @@
 :root {
   --clr-accent-100: #fff;
-  --clr-accent-200: rgba(160, 156, 156, 0.13);
+  --clr-accent-200: #aaa;
 
   --clr-primary-100: rgb(16, 16, 212);
 
@@ -48,6 +48,7 @@
   --bxs-300: 0 1px 1px #0000000a;
   --bxs-400: 0 2px 1px #0000000a;
 
+  --border-w-1: 2px;
   --d-border: 2px solid hotpink;
 }
 
@@ -128,16 +129,6 @@ select {
 
 /* utility classes */
 
-.container {
-  --max-width: 1110px;
-  --padding: 1rem;
-  width: min(var(--max-width), 100% - (var(--padding)));
-  margin-inline: auto;
-}
-
-@media (min-width: 50em) {
-}
-
 /* color */
 .text-primery-100 {
   color: var(--clr-primary-100);
@@ -193,8 +184,10 @@ select {
 }
 .fs-400 {
   font-size: var(--fs-400);
+  line-height: 1.2;
 }
 .fs-500 {
+  line-height: 1.1;
   font-size: var(--fs-500);
 }
 .fs-600 {
@@ -228,4 +221,110 @@ a {
   text-transform: capitalize;
   cursor: pointer;
   color: inherit;
+}
+
+.container {
+  --max-width: 900px;
+  --padding: 1rem;
+  width: min(var(--max-width), 100% - (var(--padding)));
+}
+
+/* media querry */
+@media (min-width: 50em) {
+}
+
+/* Hover on dextop and revmove on mobile */
+@media (hover: hover) {
+  .button:hover {
+    opacity: 0.9;
+  }
+  .social-icons ul li:hover {
+    border-color: var(--clr-accent-100);
+    color: var(--clr-accent-100);
+  }
+}
+
+/* center all contant  */
+#root {
+  width: 100%;
+  height: 100vh;
+  margin: 0 auto;
+  display: grid;
+  place-items: center;
+}
+
+/* styles */
+.register-container {
+  --max-width: 400px;
+  border-radius: var(--size-200);
+  margin-inline: auto;
+  border: var(--border-w-1) solid var(--clr-accent-100);
+  display: grid;
+  place-items: center;
+}
+
+.logo {
+  display: inline-flex;
+  align-items: center;
+}
+.logo span {
+  margin-right: 0.2rem;
+}
+.register-header {
+  margin: var(--flow-spaces);
+  width: 90%;
+}
+
+.register-header h1 {
+  margin: var(--size-200) 0;
+}
+.register-header p {
+  margin: var(--size-100) 0;
+  width: 40ch;
+}
+
+/* input component */
+.input-controls {
+  width: 90%;
+}
+.input-control {
+  border: var(--border-w-1) solid var(--clr-accent-200);
+  margin: var(--size-200) 0;
+}
+:where(.register-icon) {
+  position: absolute;
+  margin: calc(var(--size-100) + 0.1rem) 0 0 var(--size-100);
+}
+.input-control input {
+  padding: var(--size-100);
+  padding-left: var(--size-500);
+  width: 100%;
+  outline: none;
+  border: 0;
+  background-color: transparent;
+}
+
+.input-controls .button {
+  padding: var(--size-100);
+  width: 100%;
+}
+.register-container .options {
+  margin: var(--size-300) 0;
+}
+
+.social-icons ul {
+  display: flex;
+}
+.social-icons ul li {
+  transition: var(--ts-400);
+  margin: var(--size-200);
+  padding: var(--size-100);
+  list-style: none;
+  border: var(--border-w-1) solid var(--clr-accent-200);
+  border-radius: 100%;
+  color: var(--clr-accent-200);
+}
+.options .button {
+  background-color: transparent;
+  margin-left: calc(var(--size-100) - 0.15rem);
 }

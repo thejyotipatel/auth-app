@@ -1,5 +1,4 @@
 import React from 'react'
-import { BsFileImageFill } from 'react-icons/bs'
 
 const InputComponent = ({
   labelText,
@@ -12,14 +11,17 @@ const InputComponent = ({
   className,
 }) => {
   return (
-    <div className='input-control'>
+    <div className='input-control || btn-radius'>
       {labelText && (
         <label htmlFor={name} className={className || 'label'}>
           {labelText}
         </label>
       )}
-      {icon && <span> {icon}</span>}
+      {icon && (
+        <span className='register-icon || fs-400 text-accent-200'> {icon}</span>
+      )}
       <input
+        className='clr || text-accent-100 fw-400 fs-300'
         type={type}
         value={value}
         name={name}

@@ -5,10 +5,9 @@ const Profile = () => {
   const { toggleSidebar, showSidebar } = useAppContext()
 
   return (
-    <div className=' '>
-      <button className='menu-btn' onClick={toggleSidebar}>
+    <div className='profile-container'>
+      {/* <button className='menu-btn' onClick={toggleSidebar}>
         <div className='user'>
-          {/* <img src='' alt='user image' /> */}
           <span>
             <AiOutlineUser />
           </span>
@@ -24,24 +23,28 @@ const Profile = () => {
           </span>
         )}
       </button>
-      {showSidebar && <Sidebar />}
+      {showSidebar && <Sidebar />} */}
 
-      <header>
-        <h1>Profile info</h1>
-        <p>Basic info, like your name and photo</p>
+      <header className='cta || tb-margin'>
+        <h1 className='cta || text-center fs-700 fw-400 '>Profile info</h1>
+        <p className='cta || text-center fs-300 fw-600'>
+          Basic info, like your name and photo
+        </p>
       </header>
-      <main className='container'>
+      <main className='profile-subcontainer  '>
         <div className='contant'>
-          {/* <head> */}
-          <div className='row'>
-            <h1>Profile</h1>
-            <p>Some info may be visible to other people</p>
-          </div>
-          <div className='row'>
-            <a href='/edit-profile'>Edit</a>
-          </div>
-          {/* </head> */}
-          <div className='columes'>
+          <header className=''>
+            <div className='row'>
+              <h1 className=' | text-accent-100 fs-400 fw-400'>Profile</h1>
+              <p className=' | text-accent-100 fs-200 fw-600'>
+                Some info may be visible to other people
+              </p>
+            </div>
+            <div className='row | fs-300 fw-400'>
+              <a href='/edit-profile'>Edit</a>
+            </div>
+          </header>
+          <div className='columes | '>
             <div className='col'>
               <div className='row'>
                 <h2>Photo</h2>
@@ -63,7 +66,7 @@ const Profile = () => {
                 <h2>Bio</h2>
               </div>
               <div className='row'>
-                <p>
+                <p className='bio'>
                   Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint
                   illum quasi nemo! Dolores distinctio.
                 </p>

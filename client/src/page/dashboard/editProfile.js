@@ -1,19 +1,13 @@
 import React from 'react'
-import { Navigate } from 'react-router-dom'
+import { Navigate, Link } from 'react-router-dom'
 import {
   AiFillCamera,
   AiOutlineArrowLeft,
   AiOutlineArrowRight,
   AiOutlineArrowsAlt,
 } from 'react-icons/ai'
-import {
-  BsArrow90DegDown,
-  BsArrowBarDown,
-  BsArrowClockwise,
-  BsArrowDownLeft,
-  BsFileArrowDown,
-  BsFileArrowUp,
-} from 'react-icons/bs'
+
+import img from '../dashboard/profile.jpg'
 import { InputComponent, Sidebar } from '../../components'
 import { useAppContext } from '../../context/appContaxt'
 
@@ -21,39 +15,37 @@ const EditProfile = () => {
   const { toggleSidebar, showSidebar } = useAppContext()
 
   return (
-    <div className='container'>
-      <div className='back-link'>
-        <a href='/profile'>
-          {/* <Navigate to={'/profile'}> */}
+    <div className='editProfile-container | container'>
+      {/* <div className='back-link'>
+        <Link to={'/profile'} className='| text-primery-100'>
           <span>
             <AiOutlineArrowRight />
-            {/* <Bi /> */}
           </span>
           Back
-          {/* </Navigate> */}
-        </a>
-      </div>
-      <header>
-        <h2>Change Info</h2>
-        <p>Changes will be reflected to every services</p>
+        </Link>
+      </div> */}
+      <header className='| tb-margin flow-spaces'>
+        <h2 className='| fs-400 fw-400'>Change Info</h2>
+        <p className='| fs-200 fw-600 text-accent-200'>
+          Changes will be reflected to every services
+        </p>
       </header>
-      <div className='columes'>
-        <div className='col'>
-          <div className='row'>
-            <div className='profile-img'>
-              <img src='' alt='profile pic' />
-              <span>
-                <AiFillCamera />
-              </span>
-            </div>
-            <h3>Change Photo</h3>
+      <div className='editprofile-contant'>
+        <div className='editprofile-header '>
+          <div className='profile-img'>
+            <img src={img} alt='profile pic' />
+            <span>
+              <AiFillCamera />
+            </span>
           </div>
+          <h3 className='fs-300 text-accent-200  '>Change Photo</h3>
         </div>
         <InputComponent
           labelText={'name'}
           type='text'
           name={'name'}
           placeholderText='Enter your name...'
+          className={'edit-profile-input'}
         />
         <div className='input-control'>
           <label htmlFor='bio' className='label'>
@@ -84,7 +76,12 @@ const EditProfile = () => {
           name={'password'}
           placeholderText='Enter your new password...'
         />
-        <button type='button'>save</button>
+        <button
+          className='button | text-accent-100 bg-primery-100 btn-radius fs-300'
+          type='button'
+        >
+          save
+        </button>
       </div>
     </div>
   )

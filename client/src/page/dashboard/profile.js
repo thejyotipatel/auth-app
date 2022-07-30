@@ -37,7 +37,7 @@ const Profile = () => {
           <header className=''>
             <div className='row'>
               <h1 className=' | text-accent-100 fs-400 fw-400'>Profile</h1>
-              <p className=' | text-accent-100 fs-200 fw-600'>
+              <p className=' | text-accent-100 fs-200 fw-600 '>
                 Some info may be visible to other people
               </p>
             </div>

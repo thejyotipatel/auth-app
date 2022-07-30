@@ -33,7 +33,7 @@ function App() {
       <Routes>
         <Route path='/' index element={<EditProfile />}></Route>
         <Route path='/profile' element={<Profile />} />
-        <Route path='/edit-profile' element={<Profile />} />
+        <Route path='/edit-profile' element={<EditProfile />} />
       </Routes>
     </BrowserRouter>
   )

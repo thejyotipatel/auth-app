@@ -1,6 +1,7 @@
 import { AiFillCaretDown, AiFillCaretUp, AiOutlineUser } from 'react-icons/ai'
 import { InputComponent, Sidebar } from '../../components'
 import { useAppContext } from '../../context/appContaxt'
+import img from '../dashboard/profile.jpg'
 const Profile = () => {
   const { toggleSidebar, showSidebar } = useAppContext()
 
@@ -50,7 +51,7 @@ const Profile = () => {
                 <h2>Photo</h2>
               </div>
               <div className='row'>
-                <img src='' alt='profile pic' />
+                <img src={img} alt='profile pic' />
               </div>
             </div>
             <div className='col'>

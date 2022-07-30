@@ -370,6 +370,10 @@ a {
   border-radius: var(--btn-radius);
   padding: var(--size-100) var(--size-200);
   background-color: var(--clr-accent-200);
+  transition: var(--ts-400);
+}
+.row a:hover {
+  opacity: 0.9;
 }
 .columes .col {
   padding: var(--size-200);
@@ -390,6 +394,14 @@ a {
   font-size: var(--fs-300);
   font-weight: var(--fw-400);
   text-transform: uppercase;
+}
+.columes .col .row img {
+  width: 5rem;
+  height: 5rem;
+  overflow: hidden;
+  /* max-height: 200px; */
+
+  border-radius: 100%;
 }
 .columes .col .row p {
   font-size: var(--fs-200);

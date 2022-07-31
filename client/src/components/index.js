@@ -1,7 +1,7 @@
 import InputComponent from './inputComponent'
 import Sidebar from './sidebar'
-
 import { AiOutlineLogin } from 'react-icons/ai'
+import MainHeader from './mainHeader'
 
 const Logo = () => {
   return (
@@ -14,4 +14,4 @@ const Logo = () => {
   )
 }
 
-export { InputComponent, Sidebar, Logo }
+export { InputComponent, Sidebar, Logo, MainHeader }

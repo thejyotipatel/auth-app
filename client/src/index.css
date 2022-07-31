@@ -483,11 +483,17 @@ a {
   }
 }
 
+@media (max-width: 50em) {
+  .editProfile-container header {
+    padding: var(--size-200);
+  }
+}
+
 .editProfile-container .editprofile-contant .editprofile-header {
   display: flex;
   /* justify-content: center; */
   align-items: center;
-  margin: var(--size-200) 0;
+  margin: var(--size-400) 0;
 }
 
 .editProfile-container .editprofile-contant {
@@ -564,4 +570,19 @@ a {
   /* background-color: var(--clr-primary-100); */
   padding: var(--size-100) var(--size-200);
   text-transform: capitalize;
+}
+
+/* navigation style */
+
+/* background-color: hotpink; */
+:where(.menu-btn) {
+  right: var(--size-200);
+  top: 0;
+  position: absolute;
+  display: flex;
+  align-items: center;
+}
+:where(.menu-btn) .user {
+  display: flex;
+  align-items: center;
 }
